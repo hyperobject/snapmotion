@@ -122,11 +122,11 @@ class CORSHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             hand = int(m.group(2)) - 1
             f = open(ospath + '/return', 'w+')
             if m.group(1) == 'y':
-                f.write(str(frame.hands[hand].palm_position.yaw))
+                f.write(str(frame.hands[hand].direction.yaw * Leap.RAD_TO_DEG))
             if m.group(1) == 'p':
-                f.write(str(frame.hands[hand].palm_position.pitch))
+                f.write(str(frame.hands[hand].direction.pitch * Leap.RAD_TO_DEG))
             if m.group(1) == 'r':
-                f.write(str(frame.hands[hand].palm_position.roll))
+                f.write(str(frame.hands[hand].palm_normal.roll * Leap.RAD_TO_DEG))
             f.close()
             f = open(ospath + '/return', 'rb')
             ctype = self.guess_type(ospath + '/return')
