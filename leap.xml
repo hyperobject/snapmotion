@@ -1,0 +1,21 @@
+<blocks app="Snap! 4.0, http://snap.berkeley.edu" version="1"><block-definition s="Leap Motion %&apos;arg-0&apos; value of hand %&apos;arg-1&apos;" type="reporter" category="other"><header></header><code></code><inputs><input type="%txt">x<options>x
+y
+z
+yaw
+pitch
+roll</options></input><input type="%txt">1<options>1
+2</options></input></inputs><script><block s="doReport"><block s="reportURL"><block s="reportJoinWords"><list><l>localhost:3434/get_hand_position</l><l>/</l><block s="reportTextFunction"><l><option>encode URI component</option></l><block s="reportJoinWords"><block var="arg-0"/></block></block><l>/</l><block s="reportTextFunction"><l><option>encode URI component</option></l><block s="reportJoinWords"><block var="arg-1"/></block></block></list></block></block></block></script></block-definition><block-definition s="Leap Motion %&apos;arg-0&apos; value of finger %&apos;arg-1&apos;" type="reporter" category="other"><header></header><code></code><inputs><input type="%txt">x<options>x
+y
+z
+yaw
+pitch
+roll</options></input><input type="%txt">1<options>1
+2
+3
+4
+5
+6
+7
+8
+9
+10</options></input></inputs><script><block s="doReport"><block s="reportURL"><block s="reportJoinWords"><list><l>localhost:3434/get_finger_position</l><l>/</l><block s="reportTextFunction"><l><option>encode URI component</option></l><block s="reportJoinWords"><block var="arg-0"/></block></block><l>/</l><block s="reportTextFunction"><l><option>encode URI component</option></l><block s="reportJoinWords"><block var="arg-1"/></block></block></list></block></block></block></script></block-definition><block-definition s="Leap Motion number of hands" type="reporter" category="other"><header></header><code></code><inputs></inputs><script><block s="doReport"><block s="reportURL"><block s="reportJoinWords"><list><l>localhost:3434/number_of_hands</l></list></block></block></block></script></block-definition></blocks>
