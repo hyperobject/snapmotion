@@ -9,7 +9,7 @@ Blocks for interfacing with the Leap Motion.
 
 #Getting Started
 * Open up the Leap Motion Control Panel settings, and check the boxes labeled "Allow Web Apps" and "Allow Background Apps".
-* Open <todo link to open Snap!>
+* Open http://j.mp/snapmotion.
 * Program!
 
 #Credits
